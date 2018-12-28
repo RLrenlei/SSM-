@@ -2,7 +2,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.youmeek</groupId>
+    <groupId>com.rl</groupId>
     <artifactId>ssm</artifactId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
@@ -19,9 +19,9 @@
 
         <!--2016-02-20注释掉代码，切换到spring3试试-->
         <!--mybatis官网看到,如果要使用spring4的话,要用：mybatis-2-spring这个架包,http://blog.mybatis.org/2015/11/spring-4-got-you-down-with-no-ibatis.html-->
-        <!--<spring.version>4.0.2.RELEASE</spring.version>-->
-        <!--<mybatis.version>3.2.6</mybatis.version>-->
-        <!--<mybatis-spring.version>1.2.2</mybatis-spring.version>-->
+        <spring.version>4.0.2.RELEASE</spring.version>
+        <mybatis.version>3.2.6</mybatis.version>
+        <mybatis-spring.version>1.2.2</mybatis-spring.version>
 
         <!--2016-02-20切换到spring3试试-->
         <!--mybatis官网：http://blog.mybatis.org/2016/02/mybatis-331-and-mybatis-spring-124.html,在2016-02-13发布了3.3.1版本-->
@@ -75,7 +75,7 @@
 
         <!--其他变量 start-->
         <war-name.version>ssm</war-name.version>
-        <jdk.version>1.7</jdk.version>
+        <jdk.version>1.8</jdk.version>
 
         <tomcat-port.version>8080</tomcat-port.version>
         <tomcat-uri-encoding.version>UTF-8</tomcat-uri-encoding.version>
@@ -182,6 +182,12 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+        <!-- 分页 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>3.4.2</version>
         </dependency>
 
         <!--下面两个提供对 AspectJ 的支持，是 spring-aspects 所需要依赖的-->
